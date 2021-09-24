@@ -16,9 +16,9 @@ const responseMessage = {
         { "Color": "Blue", "Text": "Eight", "Value": 8, "Score": 8 } 
     ], 
     "Score": 63 };
-let color = "Red";//prompt("Welche Farbe wird gesucht?");
-let value = 7;//prompt("Welche Zahl wird gesucht?")
-let cardsFiltered = responseMessage.Cards
-.filter(item=>item.Color == color && item.Value == value )
-.map(item=>`${item.Color} ${item.Value}`);
-console.log(cardsFiltered);
+let color = prompt("Welche Farbe wird gesucht?");
+let value = prompt("Welche Zahl wird gesucht?")
+let cardsFiltered = responseMessage
+.Cards.filter(item=>item.Color == color && item.Value == value )
+let ergebnis = cardsFiltered.map(item=>`${item.Color} ${item.Value}`)
+console.log(ergebnis);
