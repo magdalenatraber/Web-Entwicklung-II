@@ -3,6 +3,8 @@ const baseUrl = "http://nowaunoweb.azurewebsites.net/Content/Cards/";
 
 // hier kommen ihre Skripte hin
 
+
+
 let button = document.getElementsByTagName("button");
 
 button[0].addEventListener("click", ()=> {
