@@ -16,7 +16,7 @@ let newElement = document.createElement("li");
 let newImg = document.createElement("img");
 newImg.src = `${baseUrl}${card}.png`;
 const liste = document.querySelector("#cards ul");
-
+console.log(liste);
 const newlistitem = liste.appendChild(newElement);
 newlistitem.appendChild(newImg);
 

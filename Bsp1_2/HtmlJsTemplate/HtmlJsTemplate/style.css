@@ -1,0 +1,14 @@
+.selected {
+	outline: none;
+  	border: 3px solid red;
+}
+
+#cards ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex
+  }
+.button {
+    background-color: crimson;
+}
