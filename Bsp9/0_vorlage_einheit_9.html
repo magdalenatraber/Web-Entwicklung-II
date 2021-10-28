@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Vorlage</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    <h1>Vorlage</h1>
+    <div id="content"></div>
+</body>
+<script>
+let xhr = new XMLHttpRequest();
+// konfigurieren
+xhr.open("GET","https://jsonplaceholder.typicode.com/todos/");
+xhr.responseType = "json";
+
+xhr.send();
+xhr.onload = function() {
+    if(xhr.status != 200){
+        alert(`Error ${xhr.status}: ${xhr.statusText}`);
+    }
+    else {
+        let erg = xhr.response;
+        console.log(erg);
+        alert(JSON.stringify(erg));
+    }
+}
+xhr.onerror = function(){
+    alert("Leider nich funktioniert");
+}
+
+</script>
+</html>
