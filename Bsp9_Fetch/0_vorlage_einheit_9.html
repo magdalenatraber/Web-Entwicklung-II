@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Vorlage</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    <h1>Vorlage</h1>
+    <div id="content"></div>
+</body>
+<script>
+async function load(){
+    //Request
+    //warten auf promise
+    let response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+    // dieser Code wird ausgeführt, wenn fetch fertig
+    if(response.ok){ // wenn( http-stauts 200-299 ist
+        let result = await response.json();
+        console.log(result);
+        alert(JSON.stringify(result));
+    } else {
+        alert("HTTP-Error: " + response.status)
+    }
+}
+// Methodenaufruf
+load();
+</script>
+</html>
